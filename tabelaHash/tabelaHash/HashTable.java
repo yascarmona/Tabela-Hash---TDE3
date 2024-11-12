@@ -28,7 +28,6 @@ public abstract class HashTable {
         list.add(key);
     }
 
-    // Método de busca
     public boolean search(String key) {
         int index = hashFunction(key);
         LinkedList<String> list = table.get(index);
