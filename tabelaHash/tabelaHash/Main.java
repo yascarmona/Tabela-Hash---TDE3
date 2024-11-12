@@ -11,7 +11,6 @@ public class Main {
         HashTable hashTable1 = new HashTableFunction1(size);
         HashTable hashTable2 = new HashTableFunction2(size);
 
-        //  tempo de inserção para a Função Hash 1
         long startInsertTime1 = System.currentTimeMillis();
         File file = new File(System.getProperty("user.dir") + File.separator + "tabelaHash" + File.separator + "female_names.txt");
 
@@ -26,7 +25,6 @@ public class Main {
         long endInsertTime1 = System.currentTimeMillis();
         long insertTime1 = endInsertTime1 - startInsertTime1;
 
-        //tempo de inserção para a Função Hash 2
         long startInsertTime2 = System.currentTimeMillis();
         try (BufferedReader br = new BufferedReader(new FileReader(file))) {
             String line;
@@ -39,7 +37,7 @@ public class Main {
         long endInsertTime2 = System.currentTimeMillis();
         long insertTime2 = endInsertTime2 - startInsertTime2;
 
-        // medindo o tempo de busca para a Função Hash 1
+
         long startSearchTime1 = System.currentTimeMillis();
         try (BufferedReader br = new BufferedReader(new FileReader(file))) {
             String line;
@@ -52,7 +50,7 @@ public class Main {
         long endSearchTime1 = System.currentTimeMillis();
         long searchTime1 = endSearchTime1 - startSearchTime1;
 
-        // medindo o tempo de busca para a Função Hash 2
+
         long startSearchTime2 = System.currentTimeMillis();
         try (BufferedReader br = new BufferedReader(new FileReader(file))) {
             String line;
@@ -65,7 +63,7 @@ public class Main {
         long endSearchTime2 = System.currentTimeMillis();
         long searchTime2 = endSearchTime2 - startSearchTime2;
 
-       // Relatório Comparativo
+
         System.out.println("---> Relatório Comparativo <---");
         System.out.printf("%-35s %-35s\n", "==== Função Hash 1 ====", "==== Função Hash 2 ====");
         System.out.printf("%-35s %-35s\n", "*** Relatório da Tabela Hash ***", "*** Relatório da Tabela Hash ***");
